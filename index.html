@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>QueroTudoQueÉSeu</title>
+   <link rel="stylesheet" href="css/style.css">
+   
+</head>
+
+<body>
+
+   <form autocomplete="off" name="forms1" class="box" id="form1">
+
+      <label for="" class="labelBox"> Nome:</label>
+      <input type="text" name="nome" id="nome" placeholder="Ex.: Carlos André">
+
+      <label for="" class="labelBox"> Valor em polpança:</label>
+      <input type="text" name="valorEmPolpanca" placeholder="Ex.: 22000">
+
+      <label for="" class="labelBox"> Tipo de renda:</label><br>
+      <label for="e" class="radioLabel"><input type="radio" name="rendaie" id="e" class="radioLabel"
+            value="estavel">Estável.</label>
+      <label for="i" class="radioLabel"><input type="radio" name="rendaie" id="i" class="radioLabel"
+            value="instavel">Instável.</label>
+      <br>
+      <label for="" class="labelBox"> Renda mensal:</label>
+      <input type="text" name="rendaMensal" placeholder="Ex.: 25000">
+
+      <label for="" class="labelBox"> Número de dependentes</label>
+      <input type="text" name="numeroDeDependentes" placeholder="Ex.: 3">
+
+      <button class=avaliar>Avaliar</button>
+
+   </form>
+
+   <div class="modalContainer" id="ModalContainer">
+      <div class="modal">
+         <button class="fechar" id="fechar">X</button>
+         <p id="modalText"></p>
+      </div>
+   </div>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
