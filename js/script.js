@@ -28,8 +28,9 @@ form.addEventListener("submit", function (event) {
       rendaMensal: Number(forms1.rendaMensal.value),
       numeroDeDependentes: Number(forms1.numeroDeDependentes.value),
    }
+   console.log(dados.valorEmPolpanca);
    
-   if (dados.numeroDeDependentes !== '' || dados.nome !== '') {
+   if (dados.numeroDeDependentes !== '' || dados.nome !== '' && dados.valorEmPolpanca === Number && dados.rendaMensal === Number && dados.numeroDeDependentes === Number) {
 
       if (dados.valorEmPolpanca > 5000 * dados.numeroDeDependentes) {
          polp = 'adequada'
