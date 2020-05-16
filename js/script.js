@@ -28,29 +28,39 @@ form.addEventListener("submit", function (event) {
       rendaMensal: Number(forms1.rendaMensal.value),
       numeroDeDependentes: Number(forms1.numeroDeDependentes.value),
    }
-   console.log(dados.valorEmPolpanca);
-   
-   if (dados.numeroDeDependentes !== '' || dados.nome !== '' && dados.valorEmPolpanca === Number && dados.rendaMensal === Number && dados.numeroDeDependentes === Number) {
+   console.log(dados);
 
-      if (dados.valorEmPolpanca > 5000 * dados.numeroDeDependentes) {
-         polp = 'adequada'
-      }
-      if (dados.rendaMensal > 15000 + (4000 * dados.numeroDeDependentes) && dados.rendaie === 'estavel') {
-         rend = 'adequada'
-      }
+   function validar() {
 
-      if (polp === 'adequada' && rend === 'adequada') {
-         invest = 'Ações'
-      } else if (polp === 'adequada' && rend === 'inadequada') {
-         invest = 'Combinado'
+      if (dados.numeroDeDependentes !== '' || dados.nome !== '' && dados.valorEmPolpanca === Number && dados.rendaMensal === Number && dados.numeroDeDependentes === Number) {
+
+         if (dados.valorEmPolpanca > 5000 * dados.numeroDeDependentes) {
+            polp = 'adequada'
+         }
+         if (dados.rendaMensal > 15000 + (4000 * dados.numeroDeDependentes) && dados.rendaie === 'estavel') {
+            rend = 'adequada'
+         }
+
+         if (polp === 'adequada' && rend === 'adequada') {
+            invest = 'Ações'
+         } else if (polp === 'adequada' && rend === 'inadequada') {
+            invest = 'Combinado'
+         }
+
       }
    }
-   popup.innerHTML = `<h1>Olá ${dados.nome}, belezinha?!</h1>
-   <p>Analisando seus dados recomendamos fortemente nosso plano "<b>${invest}</b>"</p>.`
+
+
+
 
    botao.addEventListener('click', () => {
+      validar()
+      popup.innerHTML = `<h1>Olá ${dados.nome}, belezinha?!</h1>
+      <p>Analisando seus dados recomendamos fortemente nosso plano "<b>${invest}</b>".</p>`
+      console.log(invest);
       iniciarModal('#ModalContainer')
+      form.values = ''
    })
-   
+
 
 })
