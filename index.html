@@ -17,7 +17,7 @@
       <input type="text" required class="formulario" name="Nome" id="nome" placeholder="Ex.: Carlos André">
 
       <label for="valorEmPolpanca" class="labelBox"> Valor em polpança:</label>
-      <input type="number" required class="formulario" name="valorEmPolpanca" placeholder="Ex.: 22000">
+      <input type="number" required class="formulario" id="valorEmPolpanca" placeholder="Ex.: 22000">
 
       <label for="rendaie" class="labelBox"> Tipo de renda:</label><br>
       <label for="e" class="radioLabel"><input type="radio" required name="rendaie" id="e" class="radioLabel"
@@ -26,12 +26,12 @@
             value="instavel">Instável.</label>
       <br>
       <label for="rendaMensal" class="labelBox"> Renda mensal:</label>
-      <input type="number" required class="formulario" name="rendaMensal" placeholder="Ex.: 25000">
+      <input type="number" required class="formulario" id="rendaMensal" placeholder="Ex.: 25000">
 
       <label for="numeroDeDependentes" class="labelBox"> Número de dependentes</label>
-      <input type="number" required class="formulario" name="numeroDeDependentes" placeholder="Ex.: 3">
+      <input type="number" required class="formulario" id="numeroDeDependentes" placeholder="Ex.: 3">
 
-      <button class=avaliar>Avaliar</button>
+      <button class=avaliar onclick="validar()">Avaliar</button>
 
    </form>
 
